@@ -57,7 +57,7 @@ public class Calculatrice {
     /**
      * Indique si n est un nombre premier.
      * Rappel : un nombre premier est un entier supérieur à 1 qui n'a que deux diviseurs
-     * distincts, 1 et lui-même.
+     * distincts, 1 et lui-mêmev.
      */
     public boolean estPremier(int n) {
         if (n < 2) {

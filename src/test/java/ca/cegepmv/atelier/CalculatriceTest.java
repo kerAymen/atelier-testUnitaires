@@ -69,15 +69,25 @@ class CalculatriceTest {
     void multiplierDeuxNombres() {
         // TODO: Arrange - Act - Assert
         // Vérifiez que multiplier(4, 5) retourne 20
-        fail("Test à compléter");
+        int a = 4;
+        int b = 5;
+        int resultat = calculatrice.multiplier(a, b);
+
+        assertEquals(20, resultat);
     }
+
 
     @Test
     void maxRetourneLePlusGrandDesDeuxNombres() {
         // TODO: Arrange - Act - Assert
         // Vérifiez que max(7, 3) retourne 7
-        fail("Test à compléter");
+        int a = 7;
+        int b = 3;
+        int resultat = calculatrice.max(a, b);
+        assertEquals(7, resultat);  
+        
     }
+
 
     // ------------------------------------------------------------------
     // Niveau 2 — Comportements composés (assertAll, assertThrows)
@@ -89,14 +99,20 @@ class CalculatriceTest {
         //  - estPair(4) doit être vrai
         //  - estPair(7) doit être faux
         //  - estPair(0) doit être vrai
-        fail("Test à compléter");
+        assertAll(
+            () -> assertTrue(calculatrice.estPair(4)),
+            () -> assertFalse(calculatrice.estPair(7)),
+            () -> assertTrue(calculatrice.estPair(0))
+        );
     }
 
     @Test
     void diviserParZeroLanceUneException() {
         // TODO: utilisez assertThrows(ArithmeticException.class, () -> ...)
         // pour vérifier que diviser(10, 0) lance bien une ArithmeticException.
-        fail("Test à compléter");
+        
+
+       
     }
 
     // ------------------------------------------------------------------
@@ -108,7 +124,6 @@ class CalculatriceTest {
     void estPremierRetourneVraiPourLesNombresPremiersConnus(int nombre) {
         // TODO: Act + Assert
         // Vérifiez que estPremier(nombre) retourne true pour chacune des valeurs fournies.
-        fail("Test à compléter");
     }
 
     @ParameterizedTest
