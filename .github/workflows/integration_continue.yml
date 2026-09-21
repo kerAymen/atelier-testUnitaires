@@ -1,7 +1,8 @@
 name: Compilation du projet atelier-test-unitaires
 
 on: 
-  push: 
+  push:
+  workflow_dispatch: #manuelle
 jobs:
     compilation: #Nom du premier job qui s'execute sur un runner ubuntu
        runs-on: ubuntu-latest
