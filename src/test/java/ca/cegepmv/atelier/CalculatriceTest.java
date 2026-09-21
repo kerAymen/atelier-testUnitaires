@@ -111,6 +111,7 @@ class CalculatriceTest {
         // TODO: utilisez assertThrows(ArithmeticException.class, () -> ...)
         // pour vérifier que diviser(10, 0) lance bien une ArithmeticException.
         
+        assertThrows(ArithmeticException.class, () -> calculatrice.diviser(10, 0));
 
        
     }
@@ -124,6 +125,7 @@ class CalculatriceTest {
     void estPremierRetourneVraiPourLesNombresPremiersConnus(int nombre) {
         // TODO: Act + Assert
         // Vérifiez que estPremier(nombre) retourne true pour chacune des valeurs fournies.
+        assertTrue(calculatrice.estPremier(nombre));
     }
 
     @ParameterizedTest
@@ -136,7 +138,7 @@ class CalculatriceTest {
     void estPremierGereLesCasLimites(int nombre, boolean attendu) {
         // TODO: Act + Assert
         // Vérifiez que estPremier(nombre) correspond bien à la valeur "attendu".
-        fail("Test à compléter");
+        assertEquals(attendu, calculatrice.estPremier(nombre));
     }
 
     @Test
@@ -144,6 +146,9 @@ class CalculatriceTest {
         // TODO: Arrange - Act - Assert
         // Cas limite : que se passe-t-il quand on divise un nombre négatif ?
         // Vérifiez que diviser(-10, 2) retourne -5.
-        fail("Test à compléter");
+        int a = -10;
+        int b = 2;
+        int resultat = calculatrice.diviser(a, b);
+        assertEquals(-5, resultat);
     }
 }

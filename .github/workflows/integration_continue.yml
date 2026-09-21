@@ -18,4 +18,4 @@ jobs:
             - name: Ajouter droit pour la compilation
               run: chmod +x ./mvnw
             - name: Compile le projet
-              run: ./mvnw -B test -Dtest=CalculatriceTest#multiplierDeuxNombres
+              run: ./mvnw -B test -Dtest=CalculatriceTest
