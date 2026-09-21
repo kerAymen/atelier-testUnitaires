@@ -110,10 +110,8 @@ class CalculatriceTest {
     void diviserParZeroLanceUneException() {
         // TODO: utilisez assertThrows(ArithmeticException.class, () -> ...)
         // pour vérifier que diviser(10, 0) lance bien une ArithmeticException.
-        
         assertThrows(ArithmeticException.class, () -> calculatrice.diviser(10, 0));
 
-       
     }
 
     // ------------------------------------------------------------------
